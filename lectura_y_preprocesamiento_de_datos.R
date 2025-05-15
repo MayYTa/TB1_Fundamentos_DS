@@ -38,7 +38,7 @@ df %>%
 # Reemplazamos Valores con 0, None o con la moda(en caso sean repeticiones pequeñas)
 df$agent[df$agent == "NULL"] <- 0
 df$company[df$company == "NULL"] <- 0
-df$meal[df$meal == "Undefined"] <- 'None'
+df$meal[df$meal == "Undefined"] <- 'SC'
 df$children[is.na(df$children)] <- 0
 
 moda_distribution_channel <- names(sort(table(df$distribution_channel), decreasing = TRUE))[1]
